@@ -10,11 +10,19 @@ type name struct {
 	Name string
 }
 
+func Logger()  {
+	
+}
 func main() {
+	db := gorm.DB{}.DB()
+	db.Error
+	db.Transaction(func(tx *gorm.DB) error {
+		return nil
+	})
 	gorm.Config{}
 	context.WithTimeout()
 	gorm.Open()
-	gorm.DB{}.Model().First().Session().ConnPool.(*PreparedStmtDB)
+	db.Model().First().Session().ConnPool.(*PreparedStmtDB)
 	//gorm.Model{}
 	fmt.Println(&name{Name: "a"})
 	row := db.Raw("select name, age, email from users where name = ?", "jinzhu").Row()
