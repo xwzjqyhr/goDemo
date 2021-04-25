@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package=",;hello";
+option go_package = ",;hello";
 
 package hello;
 import  "google/api/annotations.proto";
@@ -15,6 +15,7 @@ service Hello {
 }
 
 message HelloRequest {
+  hello.HelloReply a = 0;
   int32 num = 1;
 }
 
