@@ -7,7 +7,6 @@ go 1.16
 // 用命令创建 手动创建 go.mod 文件 都是一样的
 require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.3.0
-	google.golang.org/api v0.30.0
 	google.golang.org/grpc v1.37.0
 	google.golang.org/protobuf v1.26.0
 	gorm.io/gorm v1.21.8
